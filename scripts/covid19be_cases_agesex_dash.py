@@ -17,9 +17,10 @@ from datetime import datetime
 
 # READING AND CLEANING DATA
 # ----------------------------------------------------------------------------------------------------
-data = pd.read_csv('./data/COVID19BE_CASES_AGESEX.csv')
-data.dropna(axis=0, how='any', thresh=None, subset=None, inplace=True)
+data = pd.read_csv('../data/covid19be_cases_agesex.csv')
+data.dropna(axis=0, how='any', thresh=None, subset=['DATE'], inplace=True)
 data['DATE'] = pd.to_datetime(data['DATE'], format='%Y-%m-%d')
+data['PROVINCE'].fillna('MISSING', inplace=True)
 data.reset_index(drop=True, inplace=True)
 
 min_date = data['DATE'].min()
