@@ -1,0 +1,37 @@
+COVID-19 ANALYSIS
+=================
+
+COVID-19 - CONFIRMED CASES BY DATE, PROVINCE, AGE, AND SEX
+----------------------------------------------------------
+Questions :
+- number of cases per date per province
+- number of cases per date per age group
+- number of cases per date per province per age group
+
+COVID-19 - HOSPITALISATIONS BY DATE AND PROVINCE
+------------------------------------------------
+Data : COVID19BE_HOSP
+
+Questions :
+- total number of hospitalized patients per date
+- total number of hospitalized patients in the ICU per date
+- % of total number of all hospitalized patients who are in the ICU per date
+- total number of intakes per date
+- total number of discharges per date
+- difference between total number of intakes and discharges per date
+- total number of hospitalized patients per date per province
+- total number of hospitalized patients in the ICU per date per province
+- % of total number of all hospitalized patients who are in the ICU per date per province
+- total number of intakes per date per province
+- total number of discharges per date per province
+- difference between total number of intakes and discharges per date per province
+
+COVID-19 - NUMBER OF PERFORMED AND POSITIVE TESTS BY PROVINCE AND DATE
+----------------------------------------------------------------------
+Data : COVID19BE_TESTS
+
+Questions :
+- total number of tests and number of positive tests per day
+- positive rate per day
+- total number of tests and number of positive tests per day per province
+- positive rate per day per province
