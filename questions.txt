@@ -31,6 +31,7 @@ COVID-19 - NUMBER OF PERFORMED AND POSITIVE TESTS BY PROVINCE AND DATE
 Data : COVID19BE_TESTS
 
 Questions :
+- total number of tests
 - total number of tests and number of positive tests per day
 - positive rate per day
 - total number of tests and number of positive tests per day per province
