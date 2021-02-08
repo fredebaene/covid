@@ -44,25 +44,28 @@ colors = {
 # ----------------------------------------------------------------------------------------------------
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SOLAR])
 
-app.layout = dbc.Container([
+navbar = dbc.Navbar(
+            children=[
+                dbc.Col(dbc.NavbarBrand('COVID-19 Analysis', href='/#'), sm=3, md=2),
+                dbc.Col(dbc.Nav(dbc.NavItem(dbc.NavLink('Tests', href='/tests', active='exact')), navbar=True), width='auto'),
+                dbc.Col(dbc.Nav(dbc.NavItem(dbc.NavLink('Cases', href='/cases', active='exact')), navbar=True), width='auto')
+            ],
+            light=True,
+            dark=False,
+            color='light', # options : primary, light, dark
+            sticky='top'
+        )
 
-    # HEADER ROW
-    dbc.Row([
-
-        dbc.Col([
-
-            html.H1('COVID-19 - TESTS')
-
-        ], width={'size' : 12})
-
-    ]),
+content = dbc.Container([
 
     # CREDITS ROW
     dbc.Row([
 
         dbc.Col([
 
-            html.P('Data Source : Sciensano // Powered by : Python - Plotly - Dash // Produced by : fdeba', style={'font-size' : '12px'})
+            html.P([
+                'Data Source : Sciensano // Powered by : Python - Plotly - Dash // Produced by : fdeba'
+            ], style={'font-size' : '12px'})
 
         ], width={'size' : 12})
 
@@ -144,9 +147,14 @@ app.layout = dbc.Container([
 
         ], width={'size' : 6})
 
-    ])
+    ]),
 
 ], fluid=True)
+
+app.layout = html.Div([
+    dcc.Location(id='url', refresh=False),
+    content
+])
 
 # CALLBACK
 # ----------------------------------------------------------------------------------------------------
